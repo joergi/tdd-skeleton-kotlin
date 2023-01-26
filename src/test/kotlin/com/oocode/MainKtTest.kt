@@ -1,6 +1,7 @@
 package com.oocode
 
 import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
@@ -18,5 +19,14 @@ internal class MainKtTest {
         recentList.addThing(thing)
 
         assertFalse(recentList.isEmpty())
+    }
+
+    @Test
+    fun `should be able to retrieve items from the list`() {
+        val thing = "1"
+        val recentList = RecentList()
+        recentList.addThing(thing)
+
+        assertEquals(recentList.retrieve(), "1")
     }
 }

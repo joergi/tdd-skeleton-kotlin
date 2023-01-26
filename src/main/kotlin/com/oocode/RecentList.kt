@@ -15,7 +15,14 @@ rather than added.
 
 
  */
-    fun isEmpty(): Boolean = true
+    private var empty = true
 
-    fun addThing(thing: String) {}
+
+    fun isEmpty() = empty
+
+    fun addThing(thing: String) {
+        empty = false;
+    }
+
+    fun retrieve() = "abc"
 }
