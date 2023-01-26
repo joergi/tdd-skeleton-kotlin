@@ -1,7 +1,7 @@
 @file:Suppress("UNUSED_PARAMETER")
 
-fun main(args: Array<String>) {
-    println("Hello World!")
-}
+import com.oocode.RecentList
 
-fun moo() = "boo"
+fun main(args: Array<String>) {
+
+}

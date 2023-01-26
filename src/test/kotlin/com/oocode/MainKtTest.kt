@@ -1,13 +1,22 @@
 package com.oocode
 
-import com.natpryce.hamkrest.assertion.assertThat
-import com.natpryce.hamkrest.equalTo
-import moo
 import org.junit.jupiter.api.Test
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 internal class MainKtTest {
+
     @Test
-    fun `moo is moo`() {
-        assertThat(moo(), equalTo("boo"))
+    fun `initiated list is empty`() {
+        assertTrue(RecentList().isEmpty())
+    }
+
+    @Test
+    fun `things can be added to the list`() {
+        val thing = "1"
+        val recentList = RecentList()
+        recentList.addThing(thing)
+
+        assertFalse(recentList.isEmpty())
     }
 }
